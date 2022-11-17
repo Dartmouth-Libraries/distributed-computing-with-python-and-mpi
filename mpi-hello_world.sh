@@ -10,14 +10,9 @@
 #SBATCH --mail-type=END
 #SBATCH --mail-type=FAIL
 
-# Setup computational environment, i.e, load desired modules
-# module purge
-# module load <module name>
 
-
-
-# Execute parallel application 
 module load openmpi
 source /optnfs/common/miniconda3/etc/profile.d/conda.sh
 conda activate genpurp
+
 mpiexec -n 20 python hello-world.py
