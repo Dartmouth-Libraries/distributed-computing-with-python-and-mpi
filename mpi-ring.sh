@@ -12,4 +12,4 @@ module load openmpi
 source /optnfs/common/miniconda3/etc/profile.d/conda.sh
 conda activate genpurp
 
-mpiexec -n 20 python hello-world.py
+mpiexec -n 20 python ring-send-and-receive.py

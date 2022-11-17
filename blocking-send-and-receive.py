@@ -1,3 +1,6 @@
+"""
+This program showcases a blocking send and receive
+"""
 from mpi4py import MPI
 import time
 
@@ -5,7 +8,7 @@ comm = MPI.COMM_WORLD
 rank = comm.Get_rank()
 
 if rank == 0:
-    data = {'a': 7, 'b': 3.14}
+    data = {'Dartmouth': 1769}
     sleep_s = 5
     print(f'I am {rank=} and about to send {data=} in {sleep_s} seconds.')
     time.sleep(5)

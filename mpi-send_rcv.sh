@@ -6,9 +6,6 @@
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=1
 #SBATCH --mem-per-cpu=100M
-#SBATCH --mail-user=simon.stone@dartmouth.edu
-#SBATCH --mail-type=END
-#SBATCH --mail-type=FAIL
 
 
 module load openmpi
