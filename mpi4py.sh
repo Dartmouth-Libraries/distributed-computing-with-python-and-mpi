@@ -2,7 +2,6 @@
 
 #SBATCH --job-name="mpi4py"
 #SBATCH --time=00:05:00
-#SBATCH --partition=haswell64
 #SBATCH --nodes=10
 #SBATCH --ntasks-per-node=5
 #SBATCH --cpus-per-task=1
