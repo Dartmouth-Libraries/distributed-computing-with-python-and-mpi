@@ -2,14 +2,13 @@
 
 #SBATCH --job-name="mpi4py"
 #SBATCH --time=00:05:00
-#SBATCH --nodes=10
-#SBATCH --ntasks-per-node=5
+#SBATCH --nodes=20
+#SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=1
 #SBATCH --mem-per-cpu=100M
 #SBATCH --mail-user=simon.stone@dartmouth.edu
 #SBATCH --mail-type=END
 #SBATCH --mail-type=FAIL
-#SBATCH --output=out.put
 
 # Setup computational environment, i.e, load desired modules
 # module purge
@@ -18,6 +17,7 @@
 
 
 # Execute parallel application 
-module load openmp
+module load openmpi
+source /optnfs/common/miniconda3/etc/profile.d/conda.sh
 conda activate genpurp
-srun mpiexec -n 50 python hello-world.py
+mpiexec -n 20 python hello-world.py
