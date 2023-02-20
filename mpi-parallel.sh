@@ -2,15 +2,15 @@
 
 #SBATCH --job-name="mpi4py"
 #SBATCH --time=00:05:00
-#SBATCH --nodes=20
+#SBATCH --nodes=8
 #SBATCH --ntasks-per-node=1
-#SBATCH --cpus-per-task=1
+#SBATCH --cpus-per-task=4
 #SBATCH --mem-per-cpu=100M
-#SBATCH --exclude=k19
-
 
 module load openmpi
 source /optnfs/common/miniconda3/etc/profile.d/conda.sh
 conda activate genpurp
 
-mpiexec -n 20 python ring-send-and-receive.py
+export OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK
+
+mpiexec -n 8 python parallel.py

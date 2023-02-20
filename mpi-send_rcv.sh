@@ -7,7 +7,6 @@
 #SBATCH --cpus-per-task=1
 #SBATCH --mem-per-cpu=100M
 
-
 module load openmpi
 source /optnfs/common/miniconda3/etc/profile.d/conda.sh
 conda activate genpurp

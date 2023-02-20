@@ -6,11 +6,9 @@
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=1
 #SBATCH --mem-per-cpu=100M
-#SBATCH --exclude=k19
-
 
 module load openmpi
 source /optnfs/common/miniconda3/etc/profile.d/conda.sh
 conda activate genpurp
 
-mpiexec -n 20 python ring-send-and-receive.py
+mpiexec -n 20 python gather.py
