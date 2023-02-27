@@ -56,7 +56,7 @@ def run(data, use_nodes, n_cpus):
 
 
 if __name__ == "__main__":
-    array_size = 20_000
+    array_size = 40_000
 
     data = None
     if rank == 0:
