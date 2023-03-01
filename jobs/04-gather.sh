@@ -13,4 +13,5 @@ module load openmpi/4.1.2
 source /optnfs/common/miniconda3/etc/profile.d/conda.sh
 conda activate mpi-env
 
-mpiexec -np 20 python ../src/04-gather.py
+mpiexec -np 20 python ../src/04-gather.py --mca mpi_cuda_support 0
+

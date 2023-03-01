@@ -10,7 +10,7 @@ size = comm.Get_size()
 rank = comm.Get_rank()
 
 if rank == 0:
-    print(f'I am process {rank} and I am preparing to scatter an array'
+    print(f'I am process {rank} and I am preparing to scatter an array '
           f'of size={size * 3 + 1} across {size} processes.')
     data = [i for i in range(size * 3 + 1)]
     # The number of elements in 'data' has to match the number of receiving processes
